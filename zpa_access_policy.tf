@@ -20,11 +20,11 @@ data "zpa_scim_attribute_header" "familyName" {
 }
 
 #Create Policy Access Rule
-resource "zpa_policy_access_rule" "koba-tf-1" {
-  name                          = "koba-tf-1"
-  description                   = "koba-tf-1"
-  action                        = "ALLOW"
-  operator                      = "AND"
+resource "zpa_policy_access_rule" "this" {
+  name                          = var.zpa_policy_access_rule_name
+  description                   = var.zpa_policy_access_rule_description
+  action                        = var.zpa_policy_access_rule_action
+  operator                      = var.zpa_policy_access_rule_operator
   policy_set_id                 = data.zpa_policy_type.access_policy.id
 
   conditions {
