@@ -11,10 +11,8 @@ terraform {
 # Submit provider variables
 
 provider "zpa" {
-  zpa_client_id         = "xxxxxxxxxxxxxxxxxxxxxx"
-  zpa_client_secret     = "xxxxxxxxxxxxxxxxxxxxxx"
-  zpa_customer_id       = "xxxxxxxxxxxxxxxxxxxxxx"
+  zpa_client_id         = "Mjg4MjYwNTc1MTQwNTExOTAyLTJkODQ4MDNjLTlhZGYtNDEwMC1iZmY5LWE2NWQwZGZlOTA0Yg=="
+  zpa_client_secret     = "T_#zT;j]r:P@_WT'fdch48TA#/9`#2q`"
+  zpa_customer_id       = "288260575140511744"
 }
-
-
 
