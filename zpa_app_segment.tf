@@ -1,9 +1,9 @@
 # ZPA Application Segment resource
 resource "zpa_application_segment" "this" {
-    name              = "koba-tf-1"
-    description       = "koba-tf-1"
+    name              = var.zpa_app_segment_name
+    description       = var.zpa_app_segment_description
     enabled           = true
-    health_reporting  = "ON_ACCESS"
+    health_reporting  = var.zpa_app_segment_health_reporting
     bypass_type       = "NEVER"
     is_cname_enabled  = true
     tcp_port_ranges   = ["80", "443"]
@@ -20,15 +20,15 @@ resource "zpa_application_segment" "this" {
 
 # ZPA Segment Group resource
 resource "zpa_segment_group" "this" {
-  name            = "koba-tf-1"
-  description     = "koba-tf-1"
+  name            = var.zpa_segment_group_name
+  description     = var.zpa_segment_group_description
   enabled         = true
 }
 
 # ZPA Server Group resource
 resource "zpa_server_group" "this" {
-  name              = "koba-tf-1"
-  description       = "koba-tf-1"
+  name              = var.zpa_server_group_name
+  description       = var.zpa_server_group_description
   enabled           = true
   dynamic_discovery = true
   app_connector_groups {
