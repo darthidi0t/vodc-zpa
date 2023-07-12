@@ -1,0 +1,3 @@
+# vodc-zpa
+
+terraform apply
