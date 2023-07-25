@@ -8,8 +8,8 @@ resource "zpa_application_segment" "this" {
     is_cname_enabled  = true
     tcp_port_ranges   = ["80", "443"]
     domain_names      = [
-        "server.koba-tf.com",
-        "*.browserleaks.com"
+        "server.nishikant.com",
+        "*.voltdemos.com"
     ]
     segment_group_id  = zpa_segment_group.this.id
     server_groups {
