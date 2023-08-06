@@ -19,25 +19,25 @@ variable "resource-tag" {
 # IAM Policy Variables
 variable "iam_policy" {
   description = "Zscaler_SSM_Policy"
-  default     = "Zscaler_SSM_Policy"
+  default     = "Zscaler_SSM_Policy_ODC"
   type        = string
 }
 
 variable "aws_iam_role" {
   description = "Zscaler_SSM_IAM_Role"
-  default     = "Zscaler_SSM_IAM_Role"
+  default     = "Zscaler_SSM_IAM_Role_ODC"
   type        = string
 }
 
 variable "instance_profile" {
   description = "App Connector Profile"
-  default     = "App_Connector_Profile"
+  default     = "App_Connector_Profile_ODC"
   type        = string
 }
 
 # AWS KMS Key Variables
 variable "description" {
-  description = "Zscaler_KMS_Key_ODC"
+  description = "Zscaler_KMS_Key_ODC1"
   default     = ""
   type        = string
 }
@@ -62,14 +62,14 @@ variable "rotation_enabled" {
 
 variable "kms_alias" {
   description = "KMS Alias"
-  default     = "Zscaler_KMS_SSM_ODC"
+  default     = "Zscaler_KMS_SSM_ODC1"
   type        = string
 }
 
 # SSM Parameter Store
 variable "secure_parameters" {
   description = "Secure Parameters"
-  default     = "virtual-odc"
+  default     = "virtual-odc-ssm"
   type        = string
 }
 
