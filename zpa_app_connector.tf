@@ -1,4 +1,4 @@
-// Retrieve Connector Enrollment Cert ID
+/// Retrieve Connector Enrollment Cert ID
 data "zpa_enrollment_cert" "connector" {
   name = "Connector"
 }
