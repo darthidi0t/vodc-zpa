@@ -1,15 +1,15 @@
 # ZPA Application Segment resource
 resource "zpa_application_segment" "this" {
-    name              = "koba-tf-1"
-    description       = "koba-tf-1"
+    name              = "nishikant-App-Segment"
+    description       = "nishikant-App-Segment"
     enabled           = true
     health_reporting  = "ON_ACCESS"
     bypass_type       = "NEVER"
     is_cname_enabled  = true
     tcp_port_ranges   = ["80", "443"]
     domain_names      = [
-        "server.koba-tf.com",
-        "*.browserleaks.com"
+        "odc.tcs1.com",
+        "*.tcs-validation.com"
     ]
     segment_group_id  = zpa_segment_group.this.id
     server_groups {
@@ -20,15 +20,15 @@ resource "zpa_application_segment" "this" {
 
 # ZPA Segment Group resource
 resource "zpa_segment_group" "this" {
-  name            = "koba-tf-1"
-  description     = "koba-tf-1"
+  name            = "nishikant-app-segment-group"
+  description     = "nishikant-app-Segment-group"
   enabled         = true
 }
 
 # ZPA Server Group resource
 resource "zpa_server_group" "this" {
-  name              = "koba-tf-1"
-  description       = "koba-tf-1"
+  name              = "nishikant-server-group"
+  description       = "nishikant-server-group"
   enabled           = true
   dynamic_discovery = true
   app_connector_groups {
