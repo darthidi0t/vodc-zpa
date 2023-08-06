@@ -37,7 +37,7 @@ variable "instance_profile" {
 
 # AWS KMS Key Variables
 variable "description" {
-  description = "Zscaler_KMS_Key_TCS"
+  description = "Zscaler_KMS_Key_ODC"
   default     = ""
   type        = string
 }
@@ -62,7 +62,7 @@ variable "rotation_enabled" {
 
 variable "kms_alias" {
   description = "KMS Alias"
-  default     = "Zscaler_KMS_SSM"
+  default     = "Zscaler_KMS_SSM_ODC"
   type        = string
 }
 
