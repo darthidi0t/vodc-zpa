@@ -1,11 +1,22 @@
 # Configure ZPA provider source and version
 terraform {
   required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
     zpa = {
       source = "zscaler/zpa"
       version = "~> 2.7.0"
     }
   }
+}
+
+provider "aws" {
+  region     = "ap-south-1"
+  access_key = "AKIA6MKCUR2FHYVWFHTM"
+  secret_key = "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"
+
 }
 
 # Submit provider variables
