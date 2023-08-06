@@ -1,11 +1,11 @@
 // Create Zscaler App Connector Group
 variable "zpa_app_connector_group_name" {
-  default = "Canada Connector Group"
+  default = "India Connector Group"
   type    = string
 }
 
 variable "zpa_app_connector_group_description" {
-  default = "Canada Connector Group"
+  default = "India Connector Group"
   type    = string
 }
 
@@ -15,27 +15,27 @@ variable "zpa_app_connector_group_enabled" {
 }
 
 variable "zpa_app_connector_group_city_country" {
-  default = "Toronto, CA"
+  default = "Mumbai, IN"
   type    = string
 }
 
 variable "zpa_app_connector_group_country_code" {
-  default = "CA"
+  default = "IN"
   type    = string
 }
 
 variable "zpa_app_connector_group_latitude" {
-  default = "43.653226"
+  default = "19.0760"
   type    = string
 }
 
 variable "zpa_app_connector_group_longitude" {
-  default = "-79.3831843"
+  default = "72.8777"
   type    = string
 }
 
 variable "zpa_app_connector_group_location" {
-  default = "Toronto, CA, Canada"
+  default = "Mumbai, MH, India"
   type    = string
 }
 
