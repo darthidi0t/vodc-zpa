@@ -1,11 +1,11 @@
 // Create Zscaler App Connector Group
 variable "zpa_app_connector_group_name" {
-  default = "vODC Connector Group"
+  default = "Canada Connector Group"
   type    = string
 }
 
 variable "zpa_app_connector_group_description" {
-  default = "vODC Connector Group"
+  default = "Canada Connector Group"
   type    = string
 }
 
@@ -15,27 +15,27 @@ variable "zpa_app_connector_group_enabled" {
 }
 
 variable "zpa_app_connector_group_city_country" {
-  default = "Mumbai, IN"
+  default = "Toronto, CA"
   type    = string
 }
 
 variable "zpa_app_connector_group_country_code" {
-  default = "IN"
+  default = "CA"
   type    = string
 }
 
 variable "zpa_app_connector_group_latitude" {
-  default = "19.0759837"
+  default = "43.653226"
   type    = string
 }
 
 variable "zpa_app_connector_group_longitude" {
-  default = "72.8776559"
+  default = "-79.3831843"
   type    = string
 }
 
 variable "zpa_app_connector_group_location" {
-  default = "Mumbai, MH, India"
+  default = "Toronto, CA, Canada"
   type    = string
 }
 
@@ -66,7 +66,7 @@ variable "zpa_app_connector_group_dns_query_type" {
 
 // Create Zscaler Provisioning Key
 variable "zpa_provisioning_key_name" {
-  default = "vODC_provisioning_key"
+  default = ""
   type    = string
 }
 
@@ -80,55 +80,3 @@ variable "zpa_provisioning_key_max_usage" {
   type    = string
 }
 
-variable "zpa_app_connector_group" {
-  default = "vODC_app_connector_group"
-  type    = string
-}
-
-variable "zpa_app_segment_name" {
-  default = "vODC-App-Segment-tf1"
-  type    = string
-}
-variable "zpa_app_segment_description" {
-  default = "vODC-App-Segment-tf1"
-  type    = string
-}
-
-variable "zpa_app_segment_health_reporting" {
-  default = "ON_ACCESS"
-  type    = string
-}
-
-variable "zpa_segment_group_name" {
-  default = "vODC_Segment_group"
-  type    = string
-}
-variable "zpa_segment_group_description" {
-  default = "vODC_Segment_group"
-  type    = string
-}
-
-variable "zpa_server_group_name" {
-  default = "vODC_Server_group"
-  type    = string
-}
-variable "zpa_server_group_description" {
-  default = "vODC_Server_group"
-  type    = string
-}
-variable "zpa_policy_access_rule_name" {
-  default = "vODC_access_policy_rule"
-  type    = string
-}
-variable "zpa_policy_access_rule_description" {
-  default = "vODC_access_policy_rule"
-  type    = string
-}
-variable "zpa_policy_access_rule_action" {
-  default = "ALLOW"
-  type    = string
-}
-variable "zpa_policy_access_rule_operator" {
-  default = "AND"
-  type    = string
-}
