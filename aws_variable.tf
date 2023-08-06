@@ -37,7 +37,7 @@ variable "instance_profile" {
 
 # AWS KMS Key Variables
 variable "description" {
-  description = "Zscaler_KMS_Key"
+  description = "Zscaler_KMS_Key_TCS"
   default     = ""
   type        = string
 }
