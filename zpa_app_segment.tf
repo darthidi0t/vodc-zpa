@@ -1,15 +1,15 @@
 # ZPA Application Segment resource
 resource "zpa_application_segment" "this" {
-    name              = var.zpa_app_segment_name
-    description       = var.zpa_app_segment_description
+    name              = "koba-tf-1"
+    description       = "koba-tf-1"
     enabled           = true
-    health_reporting  = var.zpa_app_segment_health_reporting
+    health_reporting  = "ON_ACCESS"
     bypass_type       = "NEVER"
     is_cname_enabled  = true
     tcp_port_ranges   = ["80", "443"]
     domain_names      = [
-        "server.nishikant.com",
-        "*.voltdemos.com"
+        "server.koba-tf.com",
+        "*.browserleaks.com"
     ]
     segment_group_id  = zpa_segment_group.this.id
     server_groups {
@@ -20,19 +20,19 @@ resource "zpa_application_segment" "this" {
 
 # ZPA Segment Group resource
 resource "zpa_segment_group" "this" {
-  name            = var.zpa_segment_group_name
-  description     = var.zpa_segment_group_description
+  name            = "koba-tf-1"
+  description     = "koba-tf-1"
   enabled         = true
 }
 
 # ZPA Server Group resource
 resource "zpa_server_group" "this" {
-  name              = var.zpa_server_group_name
-  description       = var.zpa_server_group_description
+  name              = "koba-tf-1"
+  description       = "koba-tf-1"
   enabled           = true
   dynamic_discovery = true
   app_connector_groups {
-    id = [ zpa_app_connector_group.vODC.id ]
+    id = [ zpa_app_connector_group.aws_connector_group.id ]
   }
-  depends_on = [ zpa_app_connector_group.vODC ]
+  depends_on = [ zpa_app_connector_group.aws_connector_group ]
 }
